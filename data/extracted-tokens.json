@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "source": "vibrant.design",
+    "extracted": "2026-10",
+    "method": "black-box extraction from live production HTML (247 KB) and compiled stylesheet globals-7PsNk93W.css (357 KB)",
+    "license_note": "Factual design-token measurements for research/benchmarking. No proprietary assets included."
+  },
+  "color": {
+    "light_theme": {
+      "page_bg": "#f7f7f7",
+      "card_bg": "#ffffff",
+      "foreground": "oklch(14.5% 0 0)",
+      "border": "oklch(92.2% 0 0)"
+    },
+    "dark_theme": {
+      "page_bg": "oklch(14.5% 0 0)",
+      "card_bg": "oklch(20.5% 0 0)",
+      "border": "oklch(100% 0 0 / 0.1)"
+    },
+    "brand": {
+      "primary_interactive": "#3074FE",
+      "deep_accent": "#1838f8",
+      "component_fill": "#2563eb"
+    },
+    "inline_bg_usage_count": {
+      "#f7f7f7": 25,
+      "#ffffff": 2,
+      "#3074FE": 2,
+      "#f7f7f8": 1,
+      "#1838f8": 1
+    }
+  },
+  "typography": {
+    "family": "Inter",
+    "css_token": "--font-inter",
+    "fallback_chain": "ui-sans-serif, system-ui, sans-serif",
+    "headline_tracking": "-0.02em to -0.04em at display sizes",
+    "hero_h1_word_count": 8,
+    "hero_sub_word_count": 9
+  },
+  "geometry": {
+    "radius_base_rem": 0.625,
+    "radius_scale_px": { "md": 8, "lg": 10, "xl": 14, "2xl": 18 },
+    "radius_2xl_multiplier": 1.8,
+    "blur_scale_px": { "xs": 4, "sm": 8, "md": 12, "xl": 24 },
+    "media_aspect_ratio": "16 / 9",
+    "section_vertical_rhythm_desktop_px": [96, 128],
+    "spacing_base": "4px (tailwind spacing scale)"
+  },
+  "motion": {
+    "easing_library": [
+      { "name": "ease-out-quint", "curve": "cubic-bezier(.22, 1, .36, 1)", "use": "default entrances, drawers, most UI motion" },
+      { "name": "ease-out-quart", "curve": "cubic-bezier(.23, 1, .32, 1)", "use": "panels, cards, hover lifts" },
+      { "name": "ease-out-expo", "curve": "cubic-bezier(.16, 1, .3, 1)", "use": "hero reveals, large surfaces" },
+      { "name": "ease-in-out-quint", "curve": "cubic-bezier(.32, .72, 0, 1)", "use": "state changes, layout shifts" },
+      { "name": "ease-in-out-cubic", "curve": "cubic-bezier(.66, 0, .34, 1)", "use": "position exchanges, loops (also .33,0,.67,1 variant)" },
+      { "name": "spring-overshoot", "curve": "cubic-bezier(.34, 1.96, .94, 1)", "use": "success pops, badge bounce" },
+      { "name": "soft-overshoot", "curve": "cubic-bezier(.34, 1.45, .64, 1)", "use": "buttons pressed/released (also .22,1.32,.36,1 variant)" }
+    ],
+    "duration_bands": {
+      "hover_ms": [150, 250],
+      "entrance_ms": [300, 600],
+      "ambient_loop_min_s": 2
+    },
+    "animated_property_whitelist": ["transform", "opacity", "filter", "background-position"],
+    "keyframes_count": 38,
+    "keyframes_inventory": [
+      "digit-pop-in", "enter", "exit", "image-generation-a-size", "image-generation-a-x1",
+      "image-generation-a-x2", "image-generation-a-y1", "image-generation-b-size",
+      "image-generation-b-x1", "image-generation-b-x2", "image-generation-b-y1",
+      "image-generation-b-breathe", "image-generation-breathe", "orb-wave", "otp-bounce",
+      "otp-processing", "otp-trail", "otp-trail-success", "ping", "popover-fade-in",
+      "popover-fade-out", "popover-flip-in", "popover-flip-out", "pulse", "scan",
+      "scan-line", "shimmer", "skeleton-shimmer", "spin", "streaming-word-fade",
+      "streaming-word-hue", "t-check-spin", "t-spinner-bars", "task-spin", "text-shimmer",
+      "tw-shimmer"
+    ],
+    "shimmer_spec": "background-position 200% 0 -> -200% 0",
+    "orb_wave_spec": { "opacity": "rest -> 1 @ 28% -> rest", "scale": [1, 1.18, 1] }
+  },
+  "animated_check_component": {
+    "arc_draw": { "duration_s": 0.3, "ease": "cubic-bezier(.22, 1, .36, 1)", "lead": 0.64 },
+    "fill": { "duration_s": 0.22, "ease": "cubic-bezier(.34, 1.35, .64, 1)", "color": "#2563eb" },
+    "pop": { "duration_s": 0.22, "ease": "cubic-bezier(.34, 1.96, .94, 1)", "scale": 1.09 },
+    "revert": { "duration_s": 0.2, "ease": "cubic-bezier(.22, 1, .36, 1)" },
+    "ring": {
+      "size_px": 22,
+      "width_formula": "size * 2.5 / 22",
+      "color_light": "rgba(0,0,0,0.10)",
+      "color_dark": "rgba(255,255,255,0.12)",
+      "blur_px": 0.5
+    }
+  },
+  "page_architecture": [
+    { "order": 1, "section": "announcement strip", "spec": "40px pill row, rotating Latest tags" },
+    { "order": 2, "section": "sticky nav", "spec": "64px, frosted 8-12px blur after 8px scroll, hairline border" },
+    { "order": 3, "section": "hero", "spec": "8-word H1, 9-word sub, CTAs: Surprise me + Explore Moodboards" },
+    { "order": 4, "section": "live product grid", "spec": "16:9 masonry of named curated cards" },
+    { "order": 5, "section": "sponsored slot", "spec": "single labeled placement between rows" },
+    { "order": 6, "section": "category rails", "spec": "Hero, Features, Bento, Pricing, CTA, Logo Cloud, Testimonials, FAQ, Changelog" },
+    { "order": 7, "section": "utility pages", "spec": "How it works, Integrations, Stats, Careers, Blogs, Docs, Login/Signup, 404" },
+    { "order": 8, "section": "footer", "spec": "link columns + oversized wordmark" }
+  ],
+  "seo": {
+    "title": "Vibrant Design - Best of the Internet",
+    "title_chars": 38,
+    "description": "Curated website, section, launch-video and UI design inspiration from the best of the internet.",
+    "description_chars": 97
+  }
+}
